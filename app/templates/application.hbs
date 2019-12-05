@@ -1,5 +1,13 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<p>The links below will not run the model hook, however visiting them directly e.g. refresh the page once navigated; the hook will run.</p>
+
+<ul>
+  <li>
+    <LinkTo @route="profile" @model={{hash id=1}}>Go to /profile/1 passing a model</LinkTo>
+  </li>
+  <li>
+
+    <LinkTo @route="profile" @model={{this.model}}>Go to /profile/123 passing a model</LinkTo>
+  </li>
+</ul>
 
 {{outlet}}
